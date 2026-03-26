@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project P39 | Premium Production Facility | RINU Immobilien</title>
     <meta name="description" content="Project P39 - State-of-the-art production facility with cleanroom infrastructure at the heart of Central Europe. 3,844m² built 2019.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23D42B1E'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='bold' font-size='14' fill='white' text-anchor='middle'%3EP39%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0a1628;
-            --accent: #2563eb;
-            --accent-light: #3b82f6;
+            --primary: #1a1a2e;
+            --accent: #D42B1E;
+            --accent-light: #E8453A;
             --text: #1e293b;
             --text-light: #64748b;
             --bg: #ffffff;
-            --bg-alt: #f8fafc;
+            --bg-alt: #f8f8f8;
             --border: #e2e8f0;
-            --gold: #b8860b;
+            --grey: #6B7280;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,7 +39,7 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 22, 40, 0.95);
+            background: rgba(26, 26, 46, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
@@ -98,7 +99,7 @@
         /* Hero */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0f2035 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b1b 50%, #1a1a2e 100%);
             display: flex;
             align-items: center;
             position: relative;
@@ -112,7 +113,7 @@
             right: -20%;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(212, 43, 30, 0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -123,7 +124,7 @@
             left: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(212, 43, 30, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -137,8 +138,8 @@
 
         .hero-badge {
             display: inline-block;
-            background: rgba(37, 99, 235, 0.15);
-            border: 1px solid rgba(37, 99, 235, 0.3);
+            background: rgba(212, 43, 30, 0.15);
+            border: 1px solid rgba(212, 43, 30, 0.3);
             color: var(--accent-light);
             padding: 0.5rem 1.2rem;
             border-radius: 50px;
@@ -160,7 +161,7 @@
         }
 
         .hero h1 span {
-            background: linear-gradient(135deg, var(--accent-light), #60a5fa);
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -216,7 +217,7 @@
         .btn-primary:hover {
             background: var(--accent-light);
             transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 40px rgba(212, 43, 30, 0.3);
         }
 
         .btn-secondary {
@@ -288,14 +289,14 @@
 
         .fact-card:hover {
             border-color: var(--accent);
-            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.08);
+            box-shadow: 0 10px 40px rgba(212, 43, 30, 0.08);
             transform: translateY(-4px);
         }
 
         .fact-icon {
             width: 48px;
             height: 48px;
-            background: rgba(37, 99, 235, 0.08);
+            background: rgba(212, 43, 30, 0.08);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -457,7 +458,7 @@
             width: 40px;
             height: 40px;
             min-width: 40px;
-            background: rgba(37, 99, 235, 0.08);
+            background: rgba(212, 43, 30, 0.08);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -479,7 +480,7 @@
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b1b 100%);
             text-align: center;
         }
 
@@ -513,7 +514,7 @@
             width: 44px;
             height: 44px;
             min-width: 44px;
-            background: rgba(37, 99, 235, 0.08);
+            background: rgba(212, 43, 30, 0.08);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -624,7 +625,7 @@
                 top: 72px;
                 left: 0;
                 right: 0;
-                background: rgba(10, 22, 40, 0.98);
+                background: rgba(26, 26, 46, 0.98);
                 padding: 2rem;
                 gap: 1.5rem;
             }
@@ -734,7 +735,7 @@
                 <p class="lang-en-inline">Year Built</p>
             </div>
             <div class="stat-item">
-                <h3>6 MW</h3>
+                <h3>3 MW</h3>
                 <p class="lang-de-inline">Stromanschluss</p>
                 <p class="lang-en-inline">Power Supply</p>
             </div>
@@ -805,27 +806,27 @@
             <div class="fact-card">
                 <div class="fact-icon">&#9889;</div>
                 <div class="lang-de">
-                    <div class="fact-value">6 MW</div>
+                    <div class="fact-value">3 MW</div>
                     <h3>Stromanschluss</h3>
-                    <p>Industriestromanschluss mit 6 MW Leistung f&uuml;r energieintensive Produktionsprozesse.</p>
+                    <p>Industriestromanschluss mit 3 MW Leistung f&uuml;r energieintensive Produktionsprozesse.</p>
                 </div>
                 <div class="lang-en">
-                    <div class="fact-value">6 MW</div>
+                    <div class="fact-value">3 MW</div>
                     <h3>Power Connection</h3>
-                    <p>Industrial power connection with 6 MW capacity for energy-intensive production processes.</p>
+                    <p>Industrial power connection with 3 MW capacity for energy-intensive production processes.</p>
                 </div>
             </div>
             <div class="fact-card">
                 <div class="fact-icon">&#128293;</div>
                 <div class="lang-de">
-                    <div class="fact-value">3 MW</div>
+                    <div class="fact-value">6 MW</div>
                     <h3>Gasanschluss</h3>
-                    <p>Hochleistungs-Gasanschluss f&uuml;r Heizung, Prozessw&auml;rme und industrielle Anwendungen.</p>
+                    <p>Hochleistungs-Gasanschluss mit 6 MW f&uuml;r Heizung, Prozessw&auml;rme und industrielle Anwendungen.</p>
                 </div>
                 <div class="lang-en">
-                    <div class="fact-value">3 MW</div>
+                    <div class="fact-value">6 MW</div>
                     <h3>Gas Connection</h3>
-                    <p>High-performance gas connection for heating, process heat, and industrial applications.</p>
+                    <p>High-performance gas connection with 6 MW for heating, process heat, and industrial applications.</p>
                 </div>
             </div>
             <div class="fact-card">
@@ -887,8 +888,8 @@
                 <div class="lang-de">
                     <h3>&#9889; Infrastruktur</h3>
                     <ul class="highlight-list">
-                        <li>6 MW Stromanschluss (Industriestandard)</li>
-                        <li>3 MW Gasanschluss</li>
+                        <li>3 MW Stromanschluss (Industriestandard)</li>
+                        <li>6 MW Gasanschluss</li>
                         <li>Vollklimatisierung der gesamten Anlage</li>
                         <li>Druckluftversorgung installiert</li>
                         <li>Wasserver- und Entsorgung f&uuml;r industrielle Nutzung</li>
@@ -897,8 +898,8 @@
                 <div class="lang-en">
                     <h3>&#9889; Infrastructure</h3>
                     <ul class="highlight-list">
-                        <li>6 MW power connection (industrial grade)</li>
-                        <li>3 MW gas connection</li>
+                        <li>3 MW power connection (industrial grade)</li>
+                        <li>6 MW gas connection</li>
                         <li>Full climate control throughout the facility</li>
                         <li>Compressed air supply installed</li>
                         <li>Water supply and drainage for industrial use</li>
