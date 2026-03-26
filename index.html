@@ -976,32 +976,16 @@
         </div>
         <div class="gallery-grid fade-in">
             <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                    <span class="lang-de-inline">Hauptansicht</span>
-                    <span class="lang-en-inline">Main View</span>
-                </div>
+                <img src="img/office-building.jpg" alt="Project P39 - Office Building" loading="lazy">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                    <span class="lang-de-inline">Produktion</span>
-                    <span class="lang-en-inline">Production</span>
-                </div>
+                <img src="img/production-hall.jpg" alt="Project P39 - Production Hall" loading="lazy">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                    <span class="lang-de-inline">B&uuml;ro</span>
-                    <span class="lang-en-inline">Office</span>
-                </div>
+                <img src="img/office-front.jpg" alt="Project P39 - Office Front" loading="lazy">
             </div>
             <div class="gallery-item">
-                <div class="gallery-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                    <span class="lang-de-inline">Technik</span>
-                    <span class="lang-en-inline">Technical</span>
-                </div>
+                <img src="img/facility-exterior.jpg" alt="Project P39 - Facility Exterior" loading="lazy">
             </div>
         </div>
     </div>
@@ -1162,44 +1146,9 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <div class="lang-de">
-                    <h3>Expos&eacute; anfordern</h3>
-                </div>
-                <div class="lang-en">
-                    <h3>Request Brochure</h3>
-                </div>
-                <form id="contactForm" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">
-                            <span class="lang-de-inline">Name *</span>
-                            <span class="lang-en-inline">Name *</span>
-                        </label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-Mail *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">
-                            <span class="lang-de-inline">Unternehmen</span>
-                            <span class="lang-en-inline">Company</span>
-                        </label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">
-                            <span class="lang-de-inline">Nachricht</span>
-                            <span class="lang-en-inline">Message</span>
-                        </label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">
-                        <span class="lang-de-inline">Absenden</span>
-                        <span class="lang-en-inline">Submit</span>
-                    </button>
-                </form>
+            <div class="contact-form" style="min-height: 400px;">
+                <iframe data-tally-src="https://tally.so/embed/DEINE_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Project P39 - Kontakt"></iframe>
+                <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s)}</script>
             </div>
         </div>
     </div>
@@ -1251,24 +1200,7 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Form Handler - sends to mailto as fallback
-    function handleSubmit(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const company = document.getElementById('company').value;
-        const message = document.getElementById('message').value;
-
-        const subject = encodeURIComponent('Project P39 - Anfrage von ' + name);
-        const body = encodeURIComponent(
-            'Name: ' + name + '\n' +
-            'E-Mail: ' + email + '\n' +
-            'Unternehmen: ' + company + '\n\n' +
-            'Nachricht:\n' + message
-        );
-
-        window.location.href = 'mailto:office@rinu.at?subject=' + subject + '&body=' + body;
-    }
+    // Tally form is embedded via iframe - no custom handler needed
 </script>
 
 </body>
