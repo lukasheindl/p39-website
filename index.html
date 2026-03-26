@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project P39 | Premium Production Facility | RINU Immobilien</title>
+    <meta name="description" content="Project P39 - State-of-the-art production facility with cleanroom infrastructure at the heart of Central Europe. 3,844m² built 2019.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a1628;
+            --accent: #2563eb;
+            --accent-light: #3b82f6;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --gold: #b8860b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--accent-light); }
+
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: #fff; }
+
+        .lang-toggle {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .mobile-menu { display: none; background: none; border: none; cursor: pointer; }
+        .mobile-menu svg { width: 28px; height: 28px; stroke: #fff; }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0f2035 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            color: var(--accent-light);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-light), #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.6);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-item p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section { padding: 6rem 2rem; }
+
+        .section-inner { max-width: 1200px; margin: 0 auto; }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* Key Facts */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .fact-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .fact-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .fact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+        }
+
+        .fact-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .fact-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .fact-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+
+        /* Highlights Section */
+        #highlights { background: var(--bg-alt); }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .highlight-card {
+            background: var(--bg);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .highlight-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .highlight-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .highlight-list li {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .highlight-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* Image Gallery Placeholder */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 250px 250px;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item:first-child { grid-row: 1 / 3; }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .gallery-placeholder svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--text-light);
+            opacity: 0.5;
+        }
+
+        /* Location */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .location-map {
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+            border-radius: 16px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .benefit-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .benefit-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+            text-align: center;
+        }
+
+        .cta-section .section-title { color: #fff; }
+        .cta-section .section-subtitle {
+            color: rgba(255,255,255,0.6);
+            margin: 0 auto 2rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-item h4 {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover { text-decoration: underline; }
+
+        .contact-form {
+            background: var(--bg-alt);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .contact-form h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group { margin-bottom: 1rem; }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+            background: var(--bg);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 100px; }
+
+        .form-submit {
+            width: 100%;
+            padding: 0.9rem;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .form-submit:hover { background: var(--accent-light); }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.5);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        footer a:hover { color: #fff; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 22, 40, 0.98);
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+            .mobile-menu { display: block; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); }
+            .facts-grid { grid-template-columns: 1fr; }
+            .highlights-grid { grid-template-columns: 1fr; }
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 200px 200px;
+            }
+            .gallery-item:first-child { grid-row: auto; }
+            .location-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+            .stat-item h3 { font-size: 1.6rem; }
+            .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Language toggle */
+        .lang-en { display: none; }
+        body.en .lang-de { display: none; }
+        body.en .lang-en { display: block; }
+        body.en .lang-en-inline { display: inline; }
+        body.en .lang-de-inline { display: none; }
+        .lang-en-inline { display: none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="logo">P<span>39</span></a>
+        <div class="nav-links" id="navLinks">
+            <a href="#facts" class="lang-de-inline">Eckdaten</a>
+            <a href="#facts" class="lang-en-inline">Key Facts</a>
+            <a href="#highlights" class="lang-de-inline">Highlights</a>
+            <a href="#highlights" class="lang-en-inline">Highlights</a>
+            <a href="#gallery" class="lang-de-inline">Galerie</a>
+            <a href="#gallery" class="lang-en-inline">Gallery</a>
+            <a href="#location" class="lang-de-inline">Standort</a>
+            <a href="#location" class="lang-en-inline">Location</a>
+            <a href="#contact" class="lang-de-inline">Kontakt</a>
+            <a href="#contact" class="lang-en-inline">Contact</a>
+            <button class="lang-toggle" onclick="toggleLang()">EN</button>
+        </div>
+        <button class="mobile-menu" onclick="toggleMenu()">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="lang-de-inline">Off-Market Gelegenheit</span>
+            <span class="lang-en-inline">Off-Market Opportunity</span>
+        </div>
+        <h1>
+            <span class="lang-de-inline">Project <span>P39</span></span>
+            <span class="lang-en-inline">Project <span>P39</span></span>
+        </h1>
+        <div class="lang-de">
+            <p class="hero-sub">Hochmoderne Produktionsanlage mit Reinraum-Infrastruktur im Herzen Zentraleuropas. Baujahr 2019, sofort bezugsfertig.</p>
+        </div>
+        <div class="lang-en">
+            <p class="hero-sub">State-of-the-art production facility with cleanroom-grade infrastructure at the heart of Central Europe. Built 2019, move-in ready.</p>
+        </div>
+        <div class="cta-group">
+            <a href="#contact" class="btn-primary">
+                <span class="lang-de-inline">Expose anfordern</span>
+                <span class="lang-en-inline">Request Brochure</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#facts" class="btn-secondary">
+                <span class="lang-de-inline">Mehr erfahren</span>
+                <span class="lang-en-inline">Learn More</span>
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <h3>3.844 m&sup2;</h3>
+                <p class="lang-de-inline">Gesamtfl&auml;che</p>
+                <p class="lang-en-inline">Total Area</p>
+            </div>
+            <div class="stat-item">
+                <h3>2019</h3>
+                <p class="lang-de-inline">Baujahr</p>
+                <p class="lang-en-inline">Year Built</p>
+            </div>
+            <div class="stat-item">
+                <h3>6 MW</h3>
+                <p class="lang-de-inline">Stromanschluss</p>
+                <p class="lang-en-inline">Power Supply</p>
+            </div>
+            <div class="stat-item">
+                <h3>18.214 m&sup2;</h3>
+                <p class="lang-de-inline">Grundst&uuml;ck</p>
+                <p class="lang-en-inline">Plot Size</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEY FACTS -->
+<section id="facts">
+    <div class="section-inner">
+        <span class="section-label">
+            <span class="lang-de-inline">Eckdaten</span>
+            <span class="lang-en-inline">Key Facts</span>
+        </span>
+        <div class="lang-de">
+            <h2 class="section-title">Gebaut f&uuml;r h&ouml;chste Anspr&uuml;che</h2>
+            <p class="section-subtitle">Eine Produktionsanlage der neuesten Generation mit Reinraum-tauglicher Infrastruktur, massiver Energieversorgung und sofortiger Verf&uuml;gbarkeit.</p>
+        </div>
+        <div class="lang-en">
+            <h2 class="section-title">Built for the Highest Standards</h2>
+            <p class="section-subtitle">A next-generation production facility with cleanroom-grade infrastructure, massive power supply, and immediate availability.</p>
+        </div>
+        <div class="facts-grid fade-in">
+            <div class="fact-card">
+                <div class="fact-icon">&#9881;</div>
+                <div class="lang-de">
+                    <div class="fact-value">2.550 m&sup2;</div>
+                    <h3>Produktionsfl&auml;che</h3>
+                    <p>Flexible Hallenstruktur mit Kranbahn, geeignet f&uuml;r Pharma, Biotech, Medizintechnik und Lebensmittelproduktion.</p>
+                </div>
+                <div class="lang-en">
+                    <div class="fact-value">2,550 m&sup2;</div>
+                    <h3>Production Area</h3>
+                    <p>Flexible hall structure with overhead crane, suitable for pharma, biotech, medtech, and food production.</p>
+                </div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">&#127970;</div>
+                <div class="lang-de">
+                    <div class="fact-value">664 m&sup2;</div>
+                    <h3>B&uuml;ro &amp; Sozialr&auml;ume</h3>
+                    <p>Moderne B&uuml;rofl&auml;chen mit Besprechungsr&auml;umen, Sozialr&auml;umen und Empfangsbereich.</p>
+                </div>
+                <div class="lang-en">
+                    <div class="fact-value">664 m&sup2;</div>
+                    <h3>Office &amp; Social Areas</h3>
+                    <p>Modern office space with meeting rooms, social facilities, and reception area.</p>
+                </div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">&#128168;</div>
+                <div class="lang-de">
+                    <div class="fact-value">ePM1 90%</div>
+                    <h3>Reinraum-Luftfilterung</h3>
+                    <p>Vollst&auml;ndige RLT-Anlage mit ePM1 90% Filtern &ndash; geeignet f&uuml;r GMP-nahe Produktionsumgebungen.</p>
+                </div>
+                <div class="lang-en">
+                    <div class="fact-value">ePM1 90%</div>
+                    <h3>Cleanroom Air Filtration</h3>
+                    <p>Complete HVAC system with ePM1 90% filters &ndash; suitable for GMP-adjacent production environments.</p>
+                </div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">&#9889;</div>
+                <div class="lang-de">
+                    <div class="fact-value">6 MW</div>
+                    <h3>Stromanschluss</h3>
+                    <p>Industriestromanschluss mit 6 MW Leistung f&uuml;r energieintensive Produktionsprozesse.</p>
+                </div>
+                <div class="lang-en">
+                    <div class="fact-value">6 MW</div>
+                    <h3>Power Connection</h3>
+                    <p>Industrial power connection with 6 MW capacity for energy-intensive production processes.</p>
+                </div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">&#128293;</div>
+                <div class="lang-de">
+                    <div class="fact-value">3 MW</div>
+                    <h3>Gasanschluss</h3>
+                    <p>Hochleistungs-Gasanschluss f&uuml;r Heizung, Prozessw&auml;rme und industrielle Anwendungen.</p>
+                </div>
+                <div class="lang-en">
+                    <div class="fact-value">3 MW</div>
+                    <h3>Gas Connection</h3>
+                    <p>High-performance gas connection for heating, process heat, and industrial applications.</p>
+                </div>
+            </div>
+            <div class="fact-card">
+                <div class="fact-icon">&#128197;</div>
+                <div class="lang-de">
+                    <div class="fact-value">2019</div>
+                    <h3>Baujahr</h3>
+                    <p>Neuwertige Anlage, erbaut 2019 nach aktuellen Baustandards. Sofort nutzbar, kein Sanierungsbedarf.</p>
+                </div>
+                <div class="lang-en">
+                    <div class="fact-value">2019</div>
+                    <h3>Year Built</h3>
+                    <p>Near-new facility, built 2019 to current building standards. Immediately usable, no renovation needed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+    <div class="section-inner">
+        <span class="section-label">
+            <span class="lang-de-inline">Highlights</span>
+            <span class="lang-en-inline">Highlights</span>
+        </span>
+        <div class="lang-de">
+            <h2 class="section-title">Warum Project P39?</h2>
+            <p class="section-subtitle">Eine seltene Gelegenheit, eine sofort einsatzbereite Produktionsst&auml;tte zu erwerben &ndash; ohne Bauzeiten, ohne Genehmigungsverfahren.</p>
+        </div>
+        <div class="lang-en">
+            <h2 class="section-title">Why Project P39?</h2>
+            <p class="section-subtitle">A rare opportunity to acquire a move-in ready production facility &ndash; no construction time, no permitting delays.</p>
+        </div>
+        <div class="highlights-grid fade-in">
+            <div class="highlight-card">
+                <div class="lang-de">
+                    <h3>&#127981; Produktion</h3>
+                    <ul class="highlight-list">
+                        <li>2.550 m&sup2; Produktionshalle mit flexibler Raumaufteilung</li>
+                        <li>Kranbahn f&uuml;r schwere Maschinen und Equipment</li>
+                        <li>Reinraum-taugliche L&uuml;ftungsanlage (ePM1 90%)</li>
+                        <li>Vorbereitet f&uuml;r Pharma, Biotech, MedTech oder Food</li>
+                        <li>Erweiterungsfl&auml;chen auf dem Grundst&uuml;ck vorhanden</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <h3>&#127981; Production</h3>
+                    <ul class="highlight-list">
+                        <li>2,550 m&sup2; production hall with flexible layout</li>
+                        <li>Overhead crane for heavy machinery and equipment</li>
+                        <li>Cleanroom-grade ventilation system (ePM1 90%)</li>
+                        <li>Ready for pharma, biotech, medtech, or food manufacturing</li>
+                        <li>Expansion area available on the plot</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="lang-de">
+                    <h3>&#9889; Infrastruktur</h3>
+                    <ul class="highlight-list">
+                        <li>6 MW Stromanschluss (Industriestandard)</li>
+                        <li>3 MW Gasanschluss</li>
+                        <li>Vollklimatisierung der gesamten Anlage</li>
+                        <li>Druckluftversorgung installiert</li>
+                        <li>Wasserver- und Entsorgung f&uuml;r industrielle Nutzung</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <h3>&#9889; Infrastructure</h3>
+                    <ul class="highlight-list">
+                        <li>6 MW power connection (industrial grade)</li>
+                        <li>3 MW gas connection</li>
+                        <li>Full climate control throughout the facility</li>
+                        <li>Compressed air supply installed</li>
+                        <li>Water supply and drainage for industrial use</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="lang-de">
+                    <h3>&#127758; Strategische Lage</h3>
+                    <ul class="highlight-list">
+                        <li>Direkt an der &ouml;sterreichisch-tschechischen Grenze</li>
+                        <li>Zugang zu EU- und CEE-M&auml;rkten</li>
+                        <li>Niedrigere Betriebskosten als Ballungsr&auml;ume</li>
+                        <li>Qualifizierte Arbeitskr&auml;fte aus AT und CZ verf&uuml;gbar</li>
+                        <li>Ruhige Lage ideal f&uuml;r Produktion</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <h3>&#127758; Strategic Location</h3>
+                    <ul class="highlight-list">
+                        <li>Directly at the Austrian-Czech border</li>
+                        <li>Access to EU and CEE markets</li>
+                        <li>Lower operating costs than metropolitan areas</li>
+                        <li>Skilled workforce available from AT and CZ</li>
+                        <li>Quiet location ideal for production</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="lang-de">
+                    <h3>&#128176; Investment Case</h3>
+                    <ul class="highlight-list">
+                        <li>Kaufpreis: EUR 5.800.000</li>
+                        <li>Neuwertig &ndash; kein Investitionsstau</li>
+                        <li>Sofort produktionsbereit, keine Wartezeiten</li>
+                        <li>Geeignet f&uuml;r Eigennutzung oder als Investition</li>
+                        <li>Off-Market &ndash; exklusiv &uuml;ber RINU Immobilien</li>
+                    </ul>
+                </div>
+                <div class="lang-en">
+                    <h3>&#128176; Investment Case</h3>
+                    <ul class="highlight-list">
+                        <li>Asking price: EUR 5,800,000</li>
+                        <li>Near-new condition &ndash; no deferred maintenance</li>
+                        <li>Immediately production-ready, no waiting</li>
+                        <li>Suitable for owner-occupancy or investment</li>
+                        <li>Off-Market &ndash; exclusively via RINU Immobilien</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <div class="section-inner">
+        <span class="section-label">
+            <span class="lang-de-inline">Galerie</span>
+            <span class="lang-en-inline">Gallery</span>
+        </span>
+        <div class="lang-de">
+            <h2 class="section-title">Eindr&uuml;cke</h2>
+            <p class="section-subtitle">Visuelle &Uuml;bersicht der Anlage. Detaillierte Fotos und Grundrisse auf Anfrage.</p>
+        </div>
+        <div class="lang-en">
+            <h2 class="section-title">Impressions</h2>
+            <p class="section-subtitle">Visual overview of the facility. Detailed photos and floor plans available on request.</p>
+        </div>
+        <div class="gallery-grid fade-in">
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                    <span class="lang-de-inline">Hauptansicht</span>
+                    <span class="lang-en-inline">Main View</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                    <span class="lang-de-inline">Produktion</span>
+                    <span class="lang-en-inline">Production</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                    <span class="lang-de-inline">B&uuml;ro</span>
+                    <span class="lang-en-inline">Office</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                    <span class="lang-de-inline">Technik</span>
+                    <span class="lang-en-inline">Technical</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" style="background: var(--bg-alt);">
+    <div class="section-inner">
+        <span class="section-label">
+            <span class="lang-de-inline">Standort</span>
+            <span class="lang-en-inline">Location</span>
+        </span>
+        <div class="lang-de">
+            <h2 class="section-title">Zentraleurop&auml;ische Lage</h2>
+            <p class="section-subtitle">Strategisch positioniert an der Schnittstelle zwischen &Ouml;sterreich und Tschechien.</p>
+        </div>
+        <div class="lang-en">
+            <h2 class="section-title">Central European Location</h2>
+            <p class="section-subtitle">Strategically positioned at the intersection of Austria and the Czech Republic.</p>
+        </div>
+        <div class="location-grid fade-in">
+            <div class="location-map">
+                <div class="gallery-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:50px;height:50px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span class="lang-de-inline">Standortkarte auf Anfrage</span>
+                    <span class="lang-en-inline">Location map on request</span>
+                </div>
+            </div>
+            <div class="location-benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#127470;&#127462;</div>
+                    <div>
+                        <div class="lang-de">
+                            <h4>Nieder&ouml;sterreich, &Ouml;sterreich</h4>
+                            <p>Produktionsstandort in &Ouml;sterreich mit EU-Binnenmarkt-Zugang und hoher Rechtssicherheit.</p>
+                        </div>
+                        <div class="lang-en">
+                            <h4>Lower Austria</h4>
+                            <p>Production site in Austria with EU single market access and strong legal certainty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#127464;&#127487;</div>
+                    <div>
+                        <div class="lang-de">
+                            <h4>Direkt an der CZ-Grenze</h4>
+                            <p>Grenz&uuml;berschreitender Arbeitsmarkt, tschechische Fachkr&auml;fte verf&uuml;gbar, niedrigere Personalkosten.</p>
+                        </div>
+                        <div class="lang-en">
+                            <h4>Directly at the CZ Border</h4>
+                            <p>Cross-border labor market, Czech skilled workers available, lower personnel costs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#128200;</div>
+                    <div>
+                        <div class="lang-de">
+                            <h4>Kostenvorteile</h4>
+                            <p>Deutlich niedrigere Betriebs- und Personalkosten als in Wien, M&uuml;nchen oder Prag.</p>
+                        </div>
+                        <div class="lang-en">
+                            <h4>Cost Advantages</h4>
+                            <p>Significantly lower operating and personnel costs compared to Vienna, Munich, or Prague.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#127757;</div>
+                    <div>
+                        <div class="lang-de">
+                            <h4>EU &amp; CEE Hub</h4>
+                            <p>Ideale Position f&uuml;r Unternehmen die EU- und osteurop&auml;ische M&auml;rkte bedienen wollen.</p>
+                        </div>
+                        <div class="lang-en">
+                            <h4>EU &amp; CEE Hub</h4>
+                            <p>Ideal position for companies serving EU and Central/Eastern European markets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="section-inner" style="text-align:center;">
+        <div class="lang-de">
+            <h2 class="section-title">Interesse an Project P39?</h2>
+            <p class="section-subtitle" style="margin:0 auto 2rem;">Fordern Sie das detaillierte Expos&eacute; an oder vereinbaren Sie eine Besichtigung. Off-Market &ndash; exklusiv &uuml;ber RINU Immobilien.</p>
+        </div>
+        <div class="lang-en">
+            <h2 class="section-title">Interested in Project P39?</h2>
+            <p class="section-subtitle" style="margin:0 auto 2rem;">Request the detailed brochure or schedule a site visit. Off-Market &ndash; exclusively via RINU Immobilien.</p>
+        </div>
+        <a href="#contact" class="btn-primary">
+            <span class="lang-de-inline">Jetzt Kontakt aufnehmen</span>
+            <span class="lang-en-inline">Get in Touch</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="section-inner">
+        <span class="section-label">
+            <span class="lang-de-inline">Kontakt</span>
+            <span class="lang-en-inline">Contact</span>
+        </span>
+        <div class="lang-de">
+            <h2 class="section-title">Sprechen Sie mit uns</h2>
+            <p class="section-subtitle">Vertraulich. Diskret. Off-Market.</p>
+        </div>
+        <div class="lang-en">
+            <h2 class="section-title">Talk to Us</h2>
+            <p class="section-subtitle">Confidential. Discreet. Off-Market.</p>
+        </div>
+        <div class="contact-grid fade-in">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">&#128100;</div>
+                    <div>
+                        <h4>
+                            <span class="lang-de-inline">Ansprechpartner</span>
+                            <span class="lang-en-inline">Contact Person</span>
+                        </h4>
+                        <p>Richard Nu&szlig;baumm&uuml;ller</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#127970;</div>
+                    <div>
+                        <h4>
+                            <span class="lang-de-inline">Unternehmen</span>
+                            <span class="lang-en-inline">Company</span>
+                        </h4>
+                        <p>RINU Immobilien</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#9993;</div>
+                    <div>
+                        <h4>E-Mail</h4>
+                        <p><a href="mailto:office@rinu.at">office@rinu.at</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">&#128222;</div>
+                    <div>
+                        <h4>
+                            <span class="lang-de-inline">Telefon</span>
+                            <span class="lang-en-inline">Phone</span>
+                        </h4>
+                        <p><a href="tel:+436766605039">+43 676 660 50 39</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="lang-de">
+                    <h3>Expos&eacute; anfordern</h3>
+                </div>
+                <div class="lang-en">
+                    <h3>Request Brochure</h3>
+                </div>
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">
+                            <span class="lang-de-inline">Name *</span>
+                            <span class="lang-en-inline">Name *</span>
+                        </label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">
+                            <span class="lang-de-inline">Unternehmen</span>
+                            <span class="lang-en-inline">Company</span>
+                        </label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">
+                            <span class="lang-de-inline">Nachricht</span>
+                            <span class="lang-en-inline">Message</span>
+                        </label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <span class="lang-de-inline">Absenden</span>
+                        <span class="lang-en-inline">Submit</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 RINU Immobilien. Project P39.
+        <span class="lang-de-inline">Alle Rechte vorbehalten.</span>
+        <span class="lang-en-inline">All rights reserved.</span>
+    </p>
+</footer>
+
+<script>
+    // Language Toggle
+    function toggleLang() {
+        const body = document.body;
+        const btn = document.querySelector('.lang-toggle');
+        if (body.classList.contains('en')) {
+            body.classList.remove('en');
+            btn.textContent = 'EN';
+            document.documentElement.lang = 'de';
+        } else {
+            body.classList.add('en');
+            btn.textContent = 'DE';
+            document.documentElement.lang = 'en';
+        }
+    }
+
+    // Mobile Menu
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
+        });
+    });
+
+    // Scroll Animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Form Handler - sends to mailto as fallback
+    function handleSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const company = document.getElementById('company').value;
+        const message = document.getElementById('message').value;
+
+        const subject = encodeURIComponent('Project P39 - Anfrage von ' + name);
+        const body = encodeURIComponent(
+            'Name: ' + name + '\n' +
+            'E-Mail: ' + email + '\n' +
+            'Unternehmen: ' + company + '\n\n' +
+            'Nachricht:\n' + message
+        );
+
+        window.location.href = 'mailto:office@rinu.at?subject=' + subject + '&body=' + body;
+    }
+</script>
+
+</body>
+</html>
