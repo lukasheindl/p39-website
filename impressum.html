@@ -72,6 +72,20 @@
 
         .nav-links a:hover { color: #fff; }
 
+        .lang-toggle {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle:hover { background: rgba(255,255,255,0.2); }
+
         .content {
             max-width: 800px;
             margin: 0 auto;
@@ -132,6 +146,15 @@
         footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
         footer a:hover { color: #fff; }
 
+        .lang-de { display: block; }
+        .lang-en { display: none; }
+        .lang-de-inline { display: inline; }
+        .lang-en-inline { display: none; }
+        body.en .lang-de { display: none; }
+        body.en .lang-en { display: block; }
+        body.en .lang-de-inline { display: none; }
+        body.en .lang-en-inline { display: inline; }
+
         @media (max-width: 600px) {
             .content { padding: 6rem 1.2rem 3rem; }
             .content h1 { font-size: 2rem; }
@@ -144,12 +167,17 @@
     <div class="nav-inner">
         <a href="index.html" class="logo">P<span>39</span></a>
         <div class="nav-links">
-            <a href="index.html">&larr; Zur&uuml;ck zur Startseite</a>
+            <a href="index.html">
+                <span class="lang-de-inline">&larr; Zur&uuml;ck zur Startseite</span>
+                <span class="lang-en-inline">&larr; Back to Home</span>
+            </a>
+            <button class="lang-toggle" onclick="toggleLang()">EN</button>
         </div>
     </div>
 </nav>
 
-<div class="content">
+<!-- DEUTSCH -->
+<div class="content lang-de">
     <h1>Impressum</h1>
 
     <h2>Medieninhaber &amp; Herausgeber</h2>
@@ -183,29 +211,95 @@
     <hr class="divider">
 
     <h2>Auftraggeber</h2>
-    <p>
-        Diese Website wird von der RINU GmbH im Auftrag der <strong>P39 Immobilien GmbH</strong> betrieben.
-    </p>
+    <p>Diese Website wird von der RINU GmbH im Auftrag der <strong>P39 Immobilien GmbH</strong> betrieben.</p>
 
     <hr class="divider">
 
     <h2>Haftungsausschluss</h2>
-    <p>
-        Die Inhalte dieser Website wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte &uuml;bernehmen wir jedoch keine Gew&auml;hr. Alle Angaben zu dem Objekt sind unverbindlich und freibleibend. Irrt&uuml;mer und &Auml;nderungen vorbehalten.
-    </p>
+    <p>Die Inhalte dieser Website wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte &uuml;bernehmen wir jedoch keine Gew&auml;hr. Alle Angaben zu dem Objekt sind unverbindlich und freibleibend. Irrt&uuml;mer und &Auml;nderungen vorbehalten.</p>
 
     <h2>Urheberrecht</h2>
-    <p>
-        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem &ouml;sterreichischen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-    </p>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem &ouml;sterreichischen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
 
     <h2>Bildnachweis</h2>
     <p>Alle Fotos: &copy; RINU GmbH / P39 Immobilien GmbH, sofern nicht anders angegeben.</p>
 </div>
 
+<!-- ENGLISH -->
+<div class="content lang-en">
+    <h1>Legal Notice (Imprint)</h1>
+
+    <h2>Media Owner &amp; Publisher</h2>
+    <p>
+        <strong>RINU GmbH</strong><br>
+        Pfarrwald 48<br>
+        3354 Wolfsbach<br>
+        Austria
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+        Phone: <a href="tel:+436766605039">+43 676 660 50 39</a><br>
+        Email: <a href="mailto:office@rinu.at">office@rinu.at</a>
+    </p>
+
+    <h2>Company Register</h2>
+    <p>
+        Company Register Number: FN 597293 y<br>
+        Commercial Court: Landesgericht St. P&ouml;lten<br>
+        VAT ID: ATU79036357<br>
+        Legal Form: Limited Liability Company (GmbH)
+    </p>
+
+    <h2>Managing Director</h2>
+    <p>Richard Nu&szlig;baumm&uuml;ller</p>
+
+    <h2>Business Activity</h2>
+    <p>Development, management, rental, acquisition, renovation, and leasing of real estate properties.</p>
+
+    <hr class="divider">
+
+    <h2>Client</h2>
+    <p>This website is operated by RINU GmbH on behalf of <strong>P39 Immobilien GmbH</strong>.</p>
+
+    <hr class="divider">
+
+    <h2>Disclaimer</h2>
+    <p>The contents of this website have been prepared with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. All information regarding the property is non-binding and subject to change. Errors and omissions excepted.</p>
+
+    <h2>Copyright</h2>
+    <p>The content and works created by the site operators on these pages are subject to Austrian copyright law. Reproduction, editing, distribution, and any form of use beyond the limits of copyright law require the written consent of the respective author or creator.</p>
+
+    <h2>Image Credits</h2>
+    <p>All photos: &copy; RINU GmbH / P39 Immobilien GmbH, unless otherwise stated.</p>
+</div>
+
 <footer>
-    <p>&copy; 2026 RINU Immobilien. Project P39. Alle Rechte vorbehalten. | <a href="index.html">Startseite</a></p>
+    <p>&copy; 2026 RINU Immobilien. Project P39.
+        <span class="lang-de-inline">Alle Rechte vorbehalten.</span>
+        <span class="lang-en-inline">All rights reserved.</span>
+        &nbsp;|&nbsp; <a href="index.html">
+            <span class="lang-de-inline">Startseite</span>
+            <span class="lang-en-inline">Home</span>
+        </a>
+    </p>
 </footer>
+
+<script>
+    function toggleLang() {
+        const body = document.body;
+        const btn = document.querySelector('.lang-toggle');
+        if (body.classList.contains('en')) {
+            body.classList.remove('en');
+            btn.textContent = 'EN';
+            document.documentElement.lang = 'de';
+        } else {
+            body.classList.add('en');
+            btn.textContent = 'DE';
+            document.documentElement.lang = 'en';
+        }
+    }
+</script>
 
 </body>
 </html>
